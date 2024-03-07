@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import Login from "./components/login/login";
+import {useState} from "react";
+import ForgetPass from "./components/forget-pass/forget-pass";
+import SetPassword from "./components/set-password/set-password";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [page, setPage] = useState(0)
+
+    return (
+        <div className="login">
+            <img className="login__logo" src={logo} alt=""/>
+            {page === 0 && <Login returnedValue={(val) => setPage(val)}/>}
+            {page === 1 && <div>You are in system!</div>}
+            {page === 2 && <ForgetPass returnedValue={(val) => setPage(val)} /> }
+            {page === 3 && <SetPassword returnedValue={(val) => setPage(val)} /> }
+        </div>
+    );
 }
 
 export default App;

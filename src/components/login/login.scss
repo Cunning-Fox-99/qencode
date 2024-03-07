@@ -1,0 +1,168 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 440px;
+  padding: 180px 20px;
+  margin: 0 auto;
+
+  &__logo {
+    margin-bottom: 80px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  &__form-title {
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #1A1919;
+  }
+
+  &__form-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__form-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 48%;
+    height: 48px;
+
+    border-radius: 10px;
+    border: 1px solid #D3D8DC;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #060E1E;
+    cursor: pointer;
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  &__form-seperator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+
+    font-size: 12px;
+    color: #BEC5CC;
+    text-align: center;
+
+    &:after, &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+
+      width: 45%;
+      height: 1px;
+
+      background: #E3E6E9;
+    }
+
+    &:after {
+      left: 0;
+    }
+
+    &:before {
+      right: 0;
+    }
+  }
+
+  &__form-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__form-input {
+    width: 100%;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__form-bottom {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    margin-bottom: 30px;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #316FEA;
+  }
+  
+  &__forget-password {
+    cursor: pointer;
+  }
+
+  &__form-button-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 100%;
+  }
+
+  &__form-button {
+    width: 100%;
+    height: 48px;
+  }
+
+  &__form-sign-up {
+    margin-top: 20px;
+    font-size: 14px;
+
+    span {
+      font-weight: 500;
+      color: #316FEA;
+      cursor: pointer;
+    }
+  }
+
+  &__form-error {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: red;
+  }
+}
